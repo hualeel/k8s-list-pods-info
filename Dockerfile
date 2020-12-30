@@ -19,4 +19,3 @@ RUN pip install -i $PYPI --upgrade pip && \
 
 EXPOSE 33333
 CMD [ "python", "./main.py" ]
-~
