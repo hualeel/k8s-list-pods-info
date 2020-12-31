@@ -14,8 +14,8 @@ COPY . /$SERVICE_DIR
 WORKDIR /$SERVICE_DIR
 
 # 添加apk国内源，安装扩展包
-RUN pip install -i $PYPI --upgrade pip && \
-    pip --no-cache-dir -r requirements.txt
+#RUN pip install -i $PYPI --upgrade pip
+RUN pip --no-cache-dir -r requirements.txt
 
 EXPOSE 33333
 CMD [ "python", "./main.py" ]
