@@ -15,7 +15,7 @@ WORKDIR /$SERVICE_DIR
 
 # 添加apk国内源，安装扩展包
 #RUN pip install -i $PYPI --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -i http://pypi.douban.com/simple --trusted-host pypi.douban.com-r requirements.txt
 
 EXPOSE 33333
 CMD [ "python", "./main.py" ]
