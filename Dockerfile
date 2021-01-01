@@ -1,4 +1,4 @@
-FROM python:3
+FROM hualeel/python3_flask:latest
 MAINTAINER Henry li
 
 
@@ -15,7 +15,7 @@ WORKDIR /$SERVICE_DIR
 
 # 添加apk国内源，安装扩展包
 #RUN pip install -i $PYPI --upgrade pip
-RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ -r requirements.txt
+#RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ -r requirements.txt
 
 EXPOSE 33333
 CMD [ "python", "./main.py" ]
